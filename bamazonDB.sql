@@ -14,7 +14,7 @@ CREATE TABLE products (
 CREATE TABLE departments (
   department_id INTEGER(10) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   department_name VARCHAR(200) NOT NULL,
-  over_head_costs DECIMAL(10, 2) NOT NULL
+  over_head_costs DECIMAL(10, 2) DEFAULT 0 NOT NULL
 );
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)

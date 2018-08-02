@@ -1,6 +1,7 @@
 // Require required npm packages
 var inquirer = require("inquirer");
 var mysql = require("mysql");
+var cTable = require("console.table");
 
 // Create connection
 var connection = mysql.createConnection({
@@ -47,14 +48,15 @@ function salesByDepartment() {
                     FROM departments
                     LEFT JOIN products ON products.department_name = departments.department_name
                     GROUP BY departments.department_name;`, function(error, results) {
-    console.log(`
-Department      Sales      Costs      Profit
---------------------------------------------`);
+//     console.log(`
+// Department      Sales      Costs      Profit
+// --------------------------------------------`);
     
-    for (let i = 0; i < results.length; i++) {
-      console.log(`${results[i].department_name}\t ${results[i].product_sales}\t ${results[i].over_head_costs}\t ${results[i].total_profit}`);
-    };
-
+//     for (let i = 0; i < results.length; i++) {
+//       console.log(`${results[i].department_name}\t ${results[i].product_sales}\t ${results[i].over_head_costs}\t ${results[i].total_profit}`);
+//     };
+  
+    console.table(results);
     menuOptions();
   });
 };

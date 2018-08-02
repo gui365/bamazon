@@ -101,7 +101,7 @@ function askQty() {
         sellItem();
       } else {
         console.log("\x1b[32m",`
-  Order placed successfully! Please allow 5-8 business days for shipping
+  Order placed successfully! Your total is $${Math.round(product[0].price * numberItems * 100) / 100}. Please allow 5-8 business days for shipping.
   `);
         updatedQty = product[0].stock_quantity - numberItems;
         
