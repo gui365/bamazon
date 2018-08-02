@@ -21,7 +21,7 @@ This application consists of 3 commands:
 
 ![bamazon Manager](./assets/images/bamazon_manager.gif)
 
-![bamazon Supervisor](./assets/images/bamazon_supervisor.gif)
+Please see the videos in the `assets` folder for a demo of the `supervisor` program.
 
 ## Objectives
 * To create a database using MySQL.

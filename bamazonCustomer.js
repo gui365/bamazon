@@ -21,11 +21,7 @@ var inventoryID = [];
 var chosenProduct = -1;
 var updatedQty = 0;
 
-// Show all items in the database
-function displayItems() {
-  connection.query("SELECT * FROM products", function(error, results) {
-    if (error) throw error;
-    console.log('\x1b[33m%s\x1b[0m',`
+console.log('\x1b[33m%s\x1b[0m',`
                                                               ....                                                                         
                                                   .,************************.                                                              
                                              .***********************************,       ,*                                                
@@ -45,8 +41,13 @@ function displayItems() {
   @@@@@@@@@&@@@@@@@    #@@@@@&(&@@@@@@@%  (@@@@.    @@@@%    %@@@@   @@@@@@%(@@@@@@@@/ /@@@@@@@@@@@@(    @@@@@%#@@@@@(    @@@@(    (@@@@   
    %@@@ (@@@@@@@@.      (@@@@@@@@. @@@(   (@@@@.    @@@@%    %@@@@    &@@@@@@@@ ,@@@(  /@@@@@@@@@@@@(     (@@@@@@@@@      @@@@(    (@@@@   
                                                                                                                                            
-                                                                                                                                           
-  
+`);
+
+// Show all items in the database
+function displayItems() {
+  connection.query("SELECT * FROM products", function(error, results) {
+    if (error) throw error;
+    console.log (`
   Our products:
   ------------`);
     for (let i = 0; i < results.length; i++) {
