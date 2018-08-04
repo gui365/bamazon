@@ -7,7 +7,7 @@ To create an amazon-like store with three levels of access.
 
 ## Installation and Set-up
 Make sure to run *npm install* at the root directory after cloning the project. You will also need to run (using either Workbench or from the command line) the sql file `bamazonDB.sql` in order to create the database.
-You also need to create a file named `keys.js`, which includes an object that holds the host, port, user, password and database, for the database that you created using the `bamazonDB.sql` file.
+You also need to create a file named `keys.js` in the root directory, which includes an object that holds the host, port, user, password and database, for the database that you created using the `bamazonDB.sql` file.
 
 ```
 var keys = {
