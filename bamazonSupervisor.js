@@ -2,15 +2,10 @@
 var inquirer = require("inquirer");
 var mysql = require("mysql");
 var cTable = require("console.table");
+var keys = require("./keys");
 
 // Create connection
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "root",
-  database: "bamazonDB"
-});
+var connection = mysql.createConnection(keys.keys);
 
 connection.connect(error => {
   if (error) throw error;
